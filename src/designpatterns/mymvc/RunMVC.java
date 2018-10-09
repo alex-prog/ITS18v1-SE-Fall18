@@ -10,5 +10,6 @@ public class RunMVC {
         System.out.println(PersonController.getGender(p));
 
         System.out.println(PersonView.getJSON(p));
+        System.out.println(PersonView.getHTML(p));
     }
 }

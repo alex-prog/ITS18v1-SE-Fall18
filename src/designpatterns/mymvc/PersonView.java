@@ -16,4 +16,25 @@ public class PersonView {
         json += "}";
         return json;
     }
+
+    public static String getHTML(Person p) {
+        String html = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "<title>Person</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "\n" +
+                MyUtil.printLine("<h1>Name:</h1>") +
+                MyUtil.printLine("<p>" + p.getName() + "</p>\n") +
+                "\n" +
+                "<h1>CPR:</h1>\n" +
+                "<p>" + p.getCpr() + "</p>\n" +
+                "<h1>Gender:</h1>\n" +
+                "<p>" + PersonController.getGender(p) + "</p>\n" +
+                "</body>\n" +
+                "</html>";
+
+        return html;
+    }
 }
